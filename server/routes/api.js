@@ -1,18 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
+
 const User = require('../models/user');
 const jwt = require('jsonwebtoken')
-const db = "mongodb+srv://marville001:38125022@cluster0.xcmyc.mongodb.net/eventsdb?retryWrites=true&w=majority";
-// mongoose.Promise = global.Promise;
 
-mongoose.connect(db, function(err){
-    if(err){
-        console.error('Error! ' + err)
-    } else {
-      console.log('Connected to mongodb')      
-    }
-});
 
 function verifyToken(req, res, next) {
   if(!req.headers.authorization) {

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthServiceService {
+export class AuthService {
   private _registerUrl = "http://localhost:5500/api/register";
   private _loginUrl = "http://localhost:5500/api/login";
 
